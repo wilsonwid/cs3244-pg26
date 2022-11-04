@@ -1,28 +1,15 @@
-#
+# CS3244 PG26 Documentation
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+This mini-website is meant as both a short documentation regarding the things our team has done throughout our machine learning project, as well as a guide to our GitHub repository that will serve as a copy of its README. Furthermore, this documentation contains the plots accompanying our model evaluations as well as short write-ups to explain said plots.
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Model Evaluations
+# Model Evaluations
+---
 This section contains all the data visualisations and/or analyses that we have done for the three best models we have created and selected based on preliminary performance metrics. These performance metrics include the mean squared error (MSE), root mean squared error (RMSE), mean absolute error (MAE), $R^2$ (the coefficient of determination), the mean absolute percentage error (MAPE), and the median absolute percentage error (MdAPE).
 
-### Rolling XGBoost
+## Rolling XGBoost
 * [xgboost-lat-lon-fig.html](rolling-xgboost/xgboost-lat-lon-fig.html)
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
-
-## Credits
+# Credits
 This website was built with [MkDocs](https://www.mkdocs.org) and [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/). 
 
 In this project, we have used various libraries and their API documentations. These include, but are not limited to:
