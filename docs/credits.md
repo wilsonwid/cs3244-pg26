@@ -13,6 +13,7 @@ In this project, we have used various libraries and their API documentations. Th
 * [Seaborn](https://seaborn.pydata.org/api.html)
 * [Matplotlib](https://matplotlib.org/stable/index.html)
 * [Pandas](https://pandas.pydata.org/docs/)
+* [Pandas Profiling](https://pandas-profiling.ydata.ai/docs/master/index.html)
 * [Python Documentation](https://docs.python.org/)
 * [Statsmodels](https://www.statsmodels.org/stable/index.html)
 * [OneMap API](https://www.onemap.gov.sg/docs/)
