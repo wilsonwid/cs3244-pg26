@@ -1,22 +1,36 @@
-
+# Website
 This website was built with [MkDocs](https://www.mkdocs.org) and [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/). 
 
+# API references
 In this project, we have used various libraries and their API documentations. These include, but are not limited to:
 
 * [Scikit-learn](https://scikit-learn.org/stable/modules/classes.html)
 * [XGBoost](https://xgboost.readthedocs.io/en/stable/)
-* [TensorFlow 2.0](https://www.tensorflow.org/api_docs/)
+* [TensorFlow](https://www.tensorflow.org/) and its high-level API [Keras](https://keras.io/api/)
 * [NumPy](https://numpy.org/doc/stable/)
 * [Scipy](https://docs.scipy.org/doc/scipy/)
 * [Plotly Express](https://plotly.com/python/plotly-express/)
 * [Seaborn](https://seaborn.pydata.org/api.html)
 * [Matplotlib](https://matplotlib.org/stable/index.html)
 * [Pandas](https://pandas.pydata.org/docs/)
+* [Python Documentation](https://docs.python.org/)
+* [Statsmodels](https://www.statsmodels.org/stable/index.html)
 
-Additionally, we used [Google Colaboratory](https://colab.research.google.com/) to quicken model training and/or evaluation, as well as these assorted online resources for references on how to implement certain functions in our project:
+# Online resources
+Additionally, we used [Google Colaboratory](https://colab.research.google.com/) to quicken model training and/or evaluation, as well as these  online resources for references and ideas on how to run our project:
 
-* 
+* <https://towardsdatascience.com/predicting-hdb-housing-prices-using-neural-networks-94ab708cccf8>
+* <https://towardsdatascience.com/predict-the-selling-price-of-hdb-resale-flats-50530391a845>
+* <https://royleekiat.com/2020/10/22/how-to-predict-hdb-resale-prices-using-3-different-machine-learning-models-linear-regression-neural-networks-k-nearest-neighbours/>
+* <https://www.kaggle.com/misterkix/prediction-of-singapore-hdb-price-machine-learning https://xiongkexin.github.io/assets/report3.pdf>
+* <https://towardsdatascience.com/using-scikit-learns-binary-trees-to-efficiently-find-latitude-and-longitude-neighbors-909979bd929b>
 
-Last but not least, [StackOverflow](https://stackoverflow.com/) was crucial in helping us create and debug our code -- we credit the below questions and their authors for helping us do so:
+# Datasets
+The datasets that we have used are listed below:
 
-* 
+* [HDB resale flat prices dataset](https://data.gov.sg/dataset/resale-flat-prices)
+* [MAS core inflation measure (CPI) dataset](https://tablebuilder.singstat.gov.sg/table/TS/M212882)
+* [Singapore overnight rate average (SORA) data](https://eservices.mas.gov.sg/statistics/dir/DomesticInterestRates.aspx)
+
+# Special mentions
+We would like to thank Prof. Kan Min-Yen and Prof. Brian Lim for their teaching in this module, as well as our project mentor Tian Xiao for the advice given to us in working through this project.
