@@ -23,10 +23,12 @@ plugins:
 # Navigation
 nav:
   - Home: index.md
-  - Motivation: motivation.md
   - Dataset: dataset.md
-  - Data Preprocessing: data-preprocessing.md
-  - Model Evaluations: evaluations.md
+  - Motivation: motivation.md
+  - Exploratory data analysis: eda.md
+  - Data preprocessing: data-preprocessing.md
+  - Model design and creation: models.md
+  - Model evaluation: evaluations.md
   - Credits: credits.md
 
 # Markdown Extensions
