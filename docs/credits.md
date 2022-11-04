@@ -15,6 +15,10 @@ In this project, we have used various libraries and their API documentations. Th
 * [Pandas](https://pandas.pydata.org/docs/)
 * [Python Documentation](https://docs.python.org/)
 * [Statsmodels](https://www.statsmodels.org/stable/index.html)
+* [OneMap API](https://www.onemap.gov.sg/docs/)
+* [Google Maps API](https://developers.google.com/maps/documentation)
+* [Geopandas](https://geopandas.org/en/stable/docs.html)
+* [Shapely](https://shapely.readthedocs.io/en/stable/manual.html)
 
 # Online resources
 Additionally, we used [Google Colaboratory](https://colab.research.google.com/) to quicken model training and/or evaluation, as well as these  online resources for references and ideas on how to run our project:
@@ -33,4 +37,4 @@ The datasets that we have used are listed below:
 * [Singapore overnight rate average (SORA) data](https://eservices.mas.gov.sg/statistics/dir/DomesticInterestRates.aspx)
 
 # Special mentions
-We would like to thank Prof. Kan Min-Yen and Prof. Brian Lim for their teaching in this module, as well as our project mentor Tian Xiao for the advice given to us in working through this project.
+We would like to thank Prof. Kan Min-Yen and Prof. Brian Lim for their teaching in this module, as well as our project mentor Tian Xiao for the advice given to us when working through this project.
