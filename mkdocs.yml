@@ -11,7 +11,7 @@ theme:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      accent: deep orange
+      accent: teal
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -24,6 +24,7 @@ plugins:
 nav:
   - Home: index.md
   - Dataset: dataset.md
+  - Data Preprocessing: data-preprocessing.md
   - Model Evaluations: evaluations.md
   - Credits: credits.md
 
