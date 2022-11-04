@@ -13,7 +13,7 @@
     
     
       
-        <title>Model evaluation - CS3244 PG26 Documentation</title>
+        <title>Exploratory data analysis - CS3244 PG26 Documentation</title>
       
     
     
@@ -67,11 +67,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#rolling-xgboost" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -101,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Model evaluation
+              Exploratory data analysis
             
           </span>
         </div>
@@ -252,11 +247,19 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../eda/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Exploratory data analysis
       </a>
+      
     </li>
   
 
@@ -297,48 +300,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Model evaluation
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../evaluations/" class="md-nav__link">
         Model evaluation
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#rolling-xgboost" class="md-nav__link">
-    Rolling XGBoost
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -376,21 +342,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#rolling-xgboost" class="md-nav__link">
-    Rolling XGBoost
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -404,13 +355,16 @@
                   
 
 
-  <h1>Model evaluation</h1>
+  <h1>Exploratory data analysis</h1>
 
-<p>This section contains all the data visualisations and/or analyses that we have done for the three best models we have created and selected based on preliminary performance metrics. These performance metrics include the mean squared error (MSE), root mean squared error (RMSE), mean absolute error (MAE), <span class="arithmatex">\(R^2\)</span> (the coefficient of determination), the mean absolute percentage error (MAPE), and the median absolute percentage error (MdAPE).</p>
-<h3 id="rolling-xgboost">Rolling XGBoost<a class="headerlink" href="#rolling-xgboost" title="Permanent link">#</a></h3>
-<ul>
-<li><a href="../rolling-xgboost/xgboost-lat-lon-fig.html">xgboost-lat-lon-fig.html</a></li>
-</ul>
+<p>Exploratory data analysis is a crucial part in any machine learning project, as it allows one to discover more insights about the data before fully committing to a certain approach in going through the project. </p>
+<p>In achieving this goal, we:</p>
+<ol>
+<li>Collated all our data into a single, unified dataset where all our analysis will be conducted in</li>
+<li>Plotted bar charts of the various categories for <code>flat_model</code>, <code>town</code>, and <code>flat_type</code> to detect categories that have very small counts. This is to group these into an <code>other</code> group that represents the minority categories for each feature.</li>
+<li>Used <code>pandas_profiling</code> to allow for automated EDA report generation. The report is available <a href="../df_combined_report.html">here</a>.</li>
+</ol>
+<p>From this initial phase of our project, we are able</p>
 
 
 
@@ -431,7 +385,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../models/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Model design and creation" rel="prev">
+        <a href="../motivation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Motivation" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -440,20 +394,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Model design and creation
+              Motivation
             </div>
           </div>
         </a>
       
       
         
-        <a href="../credits/" class="md-footer__link md-footer__link--next" aria-label="Next: Credits" rel="next">
+        <a href="../data-preprocessing/" class="md-footer__link md-footer__link--next" aria-label="Next: Data preprocessing" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Credits
+              Data preprocessing
             </div>
           </div>
           <div class="md-footer__button md-icon">
