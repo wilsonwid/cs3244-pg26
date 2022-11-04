@@ -19,6 +19,7 @@ In this project, we have used various libraries and their API documentations. Th
 * [Google Maps API](https://developers.google.com/maps/documentation)
 * [Geopandas](https://geopandas.org/en/stable/docs.html)
 * [Shapely](https://shapely.readthedocs.io/en/stable/manual.html)
+* [GitHub Docs](https://docs.github.com/en)
 
 # Online resources
 Additionally, we used [Google Colaboratory](https://colab.research.google.com/) to quicken model training and/or evaluation, as well as these  online resources for references and ideas on how to run our project:
