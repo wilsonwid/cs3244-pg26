@@ -28,6 +28,10 @@ Additionally, we used [Google Colaboratory](https://colab.research.google.com/) 
 * <https://royleekiat.com/2020/10/22/how-to-predict-hdb-resale-prices-using-3-different-machine-learning-models-linear-regression-neural-networks-k-nearest-neighbours/>
 * <https://www.kaggle.com/misterkix/prediction-of-singapore-hdb-price-machine-learning https://xiongkexin.github.io/assets/report3.pdf>
 * <https://towardsdatascience.com/using-scikit-learns-binary-trees-to-efficiently-find-latitude-and-longitude-neighbors-909979bd929b>
+* <https://stackoverflow.com/questions/70979065/how-to-plot-a-map-with-time-slider-and-zoom-on-a-city-with-plotly-in-python>
+* <https://stackoverflow.com/questions/57383651/how-to-change-the-colorbar-range-in-plotly-express-graph>
+* <https://stackoverflow.com/questions/42822768/pandas-number-of-months-between-two-dates>
+* <https://stackoverflow.com/questions/15910019/annotate-data-points-while-plotting-from-pandas-dataframe>
 
 # Datasets
 The datasets that we have used are listed below:
