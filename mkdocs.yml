@@ -2,14 +2,12 @@ site_name: CS3244 PG26 Documentation
 theme:
   name: material
   palette:
-
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -17,12 +15,25 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 
+# Plugins
+plugins:
+  - search
+
+# Navigation
+nav:
+  - Home: index.md
+  - Model Evaluations: evaluations.md
+  - Credits: credits.md
+
+# Markdown Extensions
 markdown_extensions:
   - toc:
       permalink: "#"
       baselevel: 2
   - pymdownx.arithmatex:
       generic: true
+
+# Extra JavaScript, needed for LaTeX formatting
 extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
