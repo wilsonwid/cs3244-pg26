@@ -20,6 +20,7 @@ theme:
 # Plugins
 plugins:
   - search
+  - glightbox
 
 # Navigation
 nav:
@@ -39,6 +40,8 @@ markdown_extensions:
       baselevel: 2
   - pymdownx.arithmatex:
       generic: true
+  - attr_list
+  - md_in_html
 
 # Extra JavaScript, needed for LaTeX formatting
 extra_javascript:
