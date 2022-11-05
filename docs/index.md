@@ -1,6 +1,6 @@
-# CS3244 PG26 Documentation
+# About
 ---
-This mini-website is meant as both a short documentation regarding the things our team has done throughout our machine learning project, as well as a guide to our GitHub repository that will serve as a copy of its README. Furthermore, this documentation contains the plots accompanying our model evaluations as well as short write-ups to explain said plots.
+This mini-website is meant as both a short documentation regarding the things our team has done throughout our CS3244 machine learning project, as well as a guide to our GitHub repository that will serve as a copy of its README. Furthermore, this documentation contains the plots accompanying our model evaluations as well as short write-ups to explain said plots.
 
 # Using the website
 ---

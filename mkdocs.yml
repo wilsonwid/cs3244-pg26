@@ -25,10 +25,11 @@ plugins:
 # Navigation
 nav:
   - Home: index.md
+  - Navigating the repository: navigate-repo.md
   - Dataset: dataset.md
   - Motivation: motivation.md
   - Exploratory data analysis: eda.md
-  - Data preprocessing: data-preprocessing.md
+  - Data preprocessing: feature-engineering.md
   - Model design and creation: models.md
   - Model evaluation: evaluations.md
   - Credits: credits.md
