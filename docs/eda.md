@@ -6,4 +6,9 @@ In achieving this goal, we:
 2. Plotted bar charts of the various categories for `flat_model`, `town`, and `flat_type` to detect categories that have very small counts. This is to group these into an `other` group that represents the minority categories for each feature.
 3. Used `pandas_profiling` to allow for automated EDA report generation. The report is available [here](df_combined_report.html).
 
-From this initial phase of our project, we are able
+From this initial phase of our project, we discover several features of the dataset, including:
+
+* High correlation between the floor area, resale price, and lease commencement date.
+* High correlation between flat model, flat type, floor area, and lease commencement date.
+* High correlation between town, flat model, and lease commencement date.
+* Missing remaining lease data for most of the columns, which is imputable using a 99-year HDB lease assumption.
