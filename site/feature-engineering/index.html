@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-8.5.8" name="generator"/>
-<title>Dataset - CS3244 PG26 Documentation</title>
+<title>Data preprocessing - CS3244 PG26 Documentation</title>
 <link href="../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.815d1a91.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -30,6 +30,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#basic-feature-engineering">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -51,7 +54,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Dataset
+              Data preprocessing
             
           </span>
 </div>
@@ -123,9 +126,8 @@
         Navigating the repository
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dataset/">
         Dataset
       </a>
 </li>
@@ -139,10 +141,33 @@
         Exploratory data analysis
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../feature-engineering/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Data preprocessing
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         Data preprocessing
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-feature-engineering">
+    Basic feature engineering
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-location-data">
+    Adding location data
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../models/">
@@ -168,77 +193,49 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-feature-engineering">
+    Basic feature engineering
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-location-data">
+    Adding location data
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Dataset</h1>
-<p>The dataset we chose was the <a href="https://data.gov.sg/dataset/resale-flat-prices">resale flat prices dataset</a>. This dataset contains the historical transactions of resale <a href="https://www.hdb.gov.sg/cs/infoweb/homepage">Housing Development Board (HDB)</a> flats from 1990 to present, detailing these columns:</p>
-<table>
-<thead>
-<tr>
-<th>Column name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>month</code></td>
-<td>Sale month of the resale flat</td>
-</tr>
-<tr>
-<td><code>town</code></td>
-<td>HDB towns; list available <a href="https://www.hdb.gov.sg/about-us/history/hdb-towns-your-home">here</a></td>
-</tr>
-<tr>
-<td><code>flat_type</code></td>
-<td>HDB flat types; list available <a href="https://www.hdb.gov.sg/residential/buying-a-flat/finding-a-flat/types-of-flats">here</a></td>
-</tr>
-<tr>
-<td><code>block</code></td>
-<td>Block number of the resale flat</td>
-</tr>
-<tr>
-<td><code>street_name</code></td>
-<td>Street name of HDB flat</td>
-</tr>
-<tr>
-<td><code>storey_range</code></td>
-<td>Range of storeys for HDB flat</td>
-</tr>
-<tr>
-<td><code>floor_area_sqm</code></td>
-<td>Area of the flat (in square metres)</td>
-</tr>
-<tr>
-<td><code>flat_model</code></td>
-<td>HDB flat model</td>
-</tr>
-<tr>
-<td><code>lease_commencement_date</code></td>
-<td>Lease commencement date (YYYY format)</td>
-</tr>
-<tr>
-<td><code>remaining_lease</code></td>
-<td>Remaining lease length (in years)</td>
-</tr>
-<tr>
-<td><code>resale_price</code></td>
-<td>Transacted price (in S$)</td>
-</tr>
-</tbody>
-</table>
-<p>That being said, some of the files do not have the "remaining lease period" column, for which we can impute using the assumption that HDB flats have a 99-year lease starting from the lease commencement date, which is provided in all the data files.</p>
-<p>We believe that the dataset is reliable given that it is provided by the Housing and Development Board and available for public download via the first link above. Furthermore, we can be confident that the data is updated, as is indicated from its metadata given in the same link.</p>
+<h1>Data preprocessing</h1>
+<h2 id="basic-feature-engineering">Basic feature engineering<a class="headerlink" href="#basic-feature-engineering" title="Permanent link">#</a></h2>
+<p>We conducted our feature engineering with the aim of producing as many useful features as possible to complement the raw data that has been provided. In order to do this, several things that we have done include:</p>
+<ul>
+<li>Dropping duplicate transactions</li>
+<li>Coercing low count categories to <code>OTHER</code> (as described in the exploratory data analysis portion)</li>
+<li>Converting datetime columns to simpler, numerical columns</li>
+<li>Extracting the middle floor number from <code>storey_range</code> as this indicates the 'average' value between the range of floors indicated.</li>
+<li>Remaining lease was imputed using a 99-year lease assumption for HDB flats, which was then transformed into <code>relative_tenure</code>.</li>
+<li>Using a per-square metre price instead of the resale price itself, due to a high correlation between them.</li>
+</ul>
+<p>Moreover, we have included a basic Single Ordinary Least Squares (OLS) model to ensure that our data preprocessing is working as intended. This is different from our baseline model, which is a normal linear regression model implemented with <a href="https://scikit-learn.org/stable/modules/classes.html">Scikit-learn</a> that we will detail more in the <a href="../models/">Models</a> section.</p>
+<h2 id="adding-location-data">Adding location data<a class="headerlink" href="#adding-location-data" title="Permanent link">#</a></h2>
+<p>In order to inject more features into the dataset, we decided to include some of the </p>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Navigating the repository" class="md-footer__link md-footer__link--prev" href="../navigate-repo/" rel="prev">
+<a aria-label="Previous: Exploratory data analysis" class="md-footer__link md-footer__link--prev" href="../eda/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -247,17 +244,17 @@
 <span class="md-footer__direction">
                 Previous
               </span>
-              Navigating the repository
+              Exploratory data analysis
             </div>
 </div>
 </a>
-<a aria-label="Next: Motivation" class="md-footer__link md-footer__link--next" href="../motivation/" rel="next">
+<a aria-label="Next: Model design and creation" class="md-footer__link md-footer__link--next" href="../models/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 Next
               </span>
-              Motivation
+              Model design and creation
             </div>
 </div>
 <div class="md-footer__button md-icon">
