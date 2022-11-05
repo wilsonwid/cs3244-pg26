@@ -1,3 +1,5 @@
+The repository for our project is available on [GitHub](https://github.com/wilsonwid/cs3244-pg26).
+
 * `data_raw`: All the raw data taken from our dataset sources
 * `data_processed`: Data that has undergone some form of processing
 * `docs`: Files for documentation website; necessary for MkDocs to function well
