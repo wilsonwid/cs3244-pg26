@@ -40,7 +40,7 @@ The datasets that we have used are listed below:
 
 * [HDB resale flat prices dataset](https://data.gov.sg/dataset/resale-flat-prices)
 * [MAS core inflation measure (CPI) dataset](https://tablebuilder.singstat.gov.sg/table/TS/M212882)
-* [Singapore overnight rate average (SORA) data](https://eservices.mas.gov.sg/statistics/dir/DomesticInterestRates.aspx)
+* [Singapore overnight rate average (SORA) dataset](https://eservices.mas.gov.sg/statistics/dir/DomesticInterestRates.aspx)
 
 # Special mentions
 We would like to thank Prof. Kan Min-Yen and Prof. Brian Lim for their teaching in this module, as well as our project mentor Tian Xiao for the advice given to us when working through this project.
