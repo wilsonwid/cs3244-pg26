@@ -7,3 +7,12 @@ This mini-website is meant as both a short documentation regarding the things ou
 * Navigate the website by searching (on the top right searchbar) or by clicking any text inside the left navbar.
 * Each page's table of contents will be displayed on the right hand side of the screen.
 * Toggle between light and dark mode by pressing the "sun" icon on the top right.
+
+# CS3244 Team PG26 members
+---
+* [Lim Koon Kiat](https://github.com/limkoonkiat)
+* [Ng Wen Jun](https://github.com/wenjunthenwj)
+* [Ryan Tan Wei Jie](https://github.com/chiralcentre)
+* [S. K. Haridharan](https://github.com/hari-dharan)
+* [Wilson Widyadhana](https://github.com/wilsonwid/)
+* [Veronica Angelin Setiyo](https://github.com/veronicangelin)
