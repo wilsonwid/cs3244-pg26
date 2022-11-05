@@ -1,11 +1,11 @@
 # cs3244-pg26
-CS3244 Group Project Repo for PG26, made by (in alphabetical order):
-* Lim Koon Kiat
-* Ng Wen Jun
-* Ryan Tan Wei Jie
-* S. K. Haridharan
-* Wilson Widyadhana
-* Veronica Angelin Setiyo
+CS3244 Team PG26's group project, made by (in alphabetical order):
+* [Lim Koon Kiat](https://github.com/limkoonkiat)
+* [Ng Wen Jun](https://github.com/wenjunthenwj)
+* [Ryan Tan Wei Jie](https://github.com/chiralcentre)
+* [S. K. Haridharan](https://github.com/hari-dharan)
+* [Wilson Widyadhana](https://github.com/wilsonwid/)
+* [Veronica Angelin Setiyo](https://github.com/veronicangelin)
 
 # Navigating the repository
 
