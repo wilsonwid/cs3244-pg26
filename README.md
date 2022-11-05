@@ -1,5 +1,11 @@
 # cs3244-pg26
-CS3244 Group Project Repo for PG26
+CS3244 Group Project Repo for PG26, made by (in alphabetical order):
+* Lim Koon Kiat
+* Ng Wen Jun
+* Ryan Tan Wei Jie
+* S. K. Haridharan
+* Wilson Widyadhana
+* Veronica Angelin Setiyo
 
 # Navigating the repository
 
