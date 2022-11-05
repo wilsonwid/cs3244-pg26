@@ -175,6 +175,14 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1>Navigating the repository</h1>
+<ul>
+<li><code>data_raw</code>: All the raw data taken from our dataset sources</li>
+<li><code>data_processed</code>: Data that has undergone some form of processing</li>
+<li><code>docs</code>: Files for documentation website; necessary for MkDocs to function well</li>
+<li><code>evaluations</code>: In-depth model evaluations we completed for three selected models, namely a rolling bagging regressor, rolling kNN regressor, and rolling XGBoost regressor. Preliminary performance metrics are computed in each model's Jupyter Notebook instead of here (these are under <code>models</code>).</li>
+<li><code>site</code>: Compiled documentation website after running <code>mkdocs build</code>.</li>
+</ul>
+<p><strong>Important note:</strong> The data files (includes files with extensions <code>.csv</code>, <code>.pkl</code>, and <code>.sav</code>) that we have used and/or created are not stored in this repo due to storage constraints. This repository is exclusively meant for displaying the work we have completed, and hence we deem the Jupyter Notebooks and figures we have made to be enough proof of such.</p>
 </article>
 </div>
 </div>

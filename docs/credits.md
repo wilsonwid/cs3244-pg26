@@ -1,5 +1,5 @@
 # Website
-This website was built with [MkDocs](https://www.mkdocs.org) and [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/). 
+This website was built with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), a theme for [MkDocs](https://www.mkdocs.org).
 
 # API references
 In this project, we have used various libraries and their API documentations. These include, but are not limited to:
