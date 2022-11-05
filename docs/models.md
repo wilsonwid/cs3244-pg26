@@ -1,0 +1,3 @@
+The models that we made can be assigned to several categories, namely decision trees, kNN, linear models, neural networks, rolling models, and XGBoost. With the exception of rolling models, each of these are 'generic' in the sense that they can be immediately created and trained by using libraries such as Scikit-learn, TensorFlow, or XGBoost.
+
+For each of our models (besides the baseline linear regression), we devised a grid search of several hyperparameters which will later be used to 
