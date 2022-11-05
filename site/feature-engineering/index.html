@@ -228,7 +228,8 @@
 </ul>
 <p>Moreover, we have included a basic Single Ordinary Least Squares (OLS) model to ensure that our data preprocessing is working as intended. This is different from our baseline model, which is a normal linear regression model implemented with <a href="https://scikit-learn.org/stable/modules/classes.html">Scikit-learn</a> that we will detail more in the <a href="../models/">Models</a> section.</p>
 <h2 id="adding-location-data">Adding location data<a class="headerlink" href="#adding-location-data" title="Permanent link">#</a></h2>
-<p>In order to inject more features into the dataset, we decided to include some of the </p>
+<p>In order to inject more features into the dataset, we decided to use the <a href="https://www.onemap.gov.sg/docs/">OneMap API</a> to attain the various ATM, bus stop, hawker centre, library, parks, pharmacies, post office, primary school, store, and train station locations in terms of their latitudes and longitudes. Furthermore, we used the <a href="https://developers.google.com/maps/documentation">Google Maps API</a> to also geocode the addresses of the HDB resale flats in our dataset. </p>
+<p>There were, however, some addresses (n = 149) that have failed to be retrieved via geocoding, and some of them (n = 46) also had issues with respect the geocoding that was retrieved, out of a total of 9,307 addresses that were included in the dataset. Although the former was dropped, the latter was included as we decided that the detrimental effect of a 'wrong' geocode was insignificant, and since there might still be useful information to be extracted from other features.</p>
 </article>
 </div>
 </div>
