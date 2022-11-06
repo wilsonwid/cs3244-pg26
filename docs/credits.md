@@ -22,18 +22,36 @@ In this project, we have used various libraries and their API documentations. Th
 * [Shapely](https://shapely.readthedocs.io/en/stable/manual.html)
 * [GitHub Docs](https://docs.github.com/en)
 
-# Online resources
-Additionally, we used [Google Colaboratory](https://colab.research.google.com/) to quicken model training and/or evaluation, as well as these  online resources for references and ideas on how to run our project:
+We have also used [Google Colaboratory](https://colab.research.google.com/) to quicken model training and/or evaluation.
 
-* <https://towardsdatascience.com/predicting-hdb-housing-prices-using-neural-networks-94ab708cccf8>
-* <https://towardsdatascience.com/predict-the-selling-price-of-hdb-resale-flats-50530391a845>
-* <https://royleekiat.com/2020/10/22/how-to-predict-hdb-resale-prices-using-3-different-machine-learning-models-linear-regression-neural-networks-k-nearest-neighbours/>
-* <https://www.kaggle.com/misterkix/prediction-of-singapore-hdb-price-machine-learning https://xiongkexin.github.io/assets/report3.pdf>
-* <https://towardsdatascience.com/using-scikit-learns-binary-trees-to-efficiently-find-latitude-and-longitude-neighbors-909979bd929b>
-* <https://stackoverflow.com/questions/70979065/how-to-plot-a-map-with-time-slider-and-zoom-on-a-city-with-plotly-in-python>
-* <https://stackoverflow.com/questions/57383651/how-to-change-the-colorbar-range-in-plotly-express-graph>
-* <https://stackoverflow.com/questions/42822768/pandas-number-of-months-between-two-dates>
-* <https://stackoverflow.com/questions/15910019/annotate-data-points-while-plotting-from-pandas-dataframe>
+# Resources
+
+## Academic research
+* Predicting the Resale Price of HDB Flats in Singapore (final project for CS5228 20/21 Sem 2):
+    * <https://www.kaggle.com/misterkix/prediction-of-singapore-hdb-price-machine-learning> 
+    * <https://xiongkexin.github.io/assets/report3.pdf>
+* Accuracy of Automated Valuation Model for HDB Resale Flats - <https://scholarbank.nus.edu.sg/handle/10635/191601?mode=full>
+* Housing Price Prediction via Improved Machine Learning Techniques - <https://www.sciencedirect.com/science/article/pii/S1877050920316318>
+
+## Online resources
+* Towards Data Science (TDS) Medium articles:
+    * Predict the Selling Price of HDB Resale Flats (TDS) - <https://towardsdatascience.com/predict-the-selling-price-of-hdb-resale-flats-50530391a845>
+    * Predicting HDB Housing Prices using Neural Networks (TDS) - <https://towardsdatascience.com/predicting-hdb-housing-prices-using-neural-networks-94ab708cccf8>
+    * Using Scikit-learn’s Binary Trees to Efficiently Find Latitude and Longitude Neighbors (TDS) - <https://towardsdatascience.com/using-scikit-learns-binary-trees-to-efficiently-find-latitude-and-longitude-neighbors-909979bd929b>
+    * Choosing a scikit-learn estimator (TDS) - <https://towardsdatascience.com/choosing-a-scikit-learn-linear-regression-algorithm-dd96b48105f5>
+
+* StackOverflow (SO) Q&As:
+    * How to plot a map with time-slider and zoom on a city with plotly in python (SO) - <https://stackoverflow.com/questions/70979065/how-to-plot-a-map-with-time-slider-and-zoom-on-a-city-with-plotly-in-python>
+    * How to change the colorbar range in plotly express graph (SO) - <https://stackoverflow.com/questions/57383651/how-to-change-the-colorbar-range-in-plotly-express-graph>
+    * Pandas - Number of Months Between Two Dates (SO) - <https://stackoverflow.com/questions/42822768/pandas-number-of-months-between-two-dates>
+    * Annotate data points while plotting from Pandas DataFrame (SO) - <https://stackoverflow.com/questions/15910019/annotate-data-points-while-plotting-from-pandas-dataframe>
+  
+* Bala’s Curve - <https://stackedhomes.com/editorial/freehold-vs-leasehold-part-1/#gs.hbakzn>
+* London Relativity - <https://www.graphsofrelativity.co.uk/>
+* How to calculate relativity - <https://www.savills.com/research_articles/255800/203902-0>
+* Why price per sqm? - <https://codyshirk.com/price-per-square-meter-m2-how-we-find-deep-value/>
+* Geocoding addresses - <https://www.andrewbreeson.com/projects/geocoding-every-hdb>
+* How to Predict HDB Resale Prices using 3 different ML Models (Linear Regression, Neural Networks, k-NN) - <https://royleekiat.com/2020/10/22/how-to-predict-hdb-resale-prices-using-3-different-machine-learning-models-linear-regression-neural-networks-k-nearest-neighbours/>
 
 # Datasets
 The datasets that we have used are listed below:
