@@ -10,12 +10,12 @@ Below is a histogram of resale property prices, which indicates a heavy right-ta
 In this section, we shall detail the performance metrics of the models that our team has created. Note that since this is only a primary stage of evaluation, we only compare the different models based on the five metrics that we have chosen, without any accompanying data visualisations.
 
 ## Biased model results
-Please visit [this page]() to view the performance metrics of our models that have been trained using an arbitrary train-test split, i.e., the results of models tainted with lookahead bias. For more details on the issue we faced, please visit [this page](lookahead-bias.md).
+Please visit [this page](results-biased.md) to view the performance metrics of our models that have been trained using an arbitrary train-test split, i.e., the results of models tainted with lookahead bias. For more details on the issue we faced, please visit [this page](lookahead-bias.md).
 
 A notable result is that of kNN regressor, where the MAPE was close to 0%, indicating that there must be some serious issue either with overfitting or with the training data.
 
 ## Unbiased model results
-Please visit [this page]() to view the performance metrics of our models trained after fixing the lookahead bias.
+Please visit [this page](results-unbiased.md) to view the performance metrics of our models trained after fixing the lookahead bias.
 
 
 # Extended model evaluations
