@@ -17,6 +17,7 @@ A notable result is that of kNN regressor, where the MAPE was close to 0%, indic
 ## Unbiased model results
 Please visit [this page](results-unbiased.md) to view the performance metrics of our models trained after fixing the lookahead bias.
 
+As we can see, the best models are (in order of increasing MdAPE) rolling bagging regressor, rolling kNN regressor, and rolling XGBoost regressor. Hence we shall choose these three models for further analysis below.
 
 # Extended model evaluations
 In this section, we shall detail the three models that we have selected, namely rolling bagging regressor, rolling kNN regressor, and rolling XGBoost regressor in more depth through the use of data visualisations on the models' predictions.
