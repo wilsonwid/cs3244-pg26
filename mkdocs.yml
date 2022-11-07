@@ -34,6 +34,7 @@ nav:
   - Lookahead bias: lookahead-bias.md
   - Model evaluation: evaluations.md
   - Credits: credits.md
+  - "Appendix: Hyperparameters": hyperparameters.md
 
 # Markdown Extensions
 markdown_extensions:
