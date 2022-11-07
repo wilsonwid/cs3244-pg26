@@ -30,6 +30,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#results">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -175,9 +178,35 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Appendix: Unbiased models' results
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         Appendix: Unbiased models' results
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#results">
+    Results
+  </a>
+<nav aria-label="Results" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abbreviations-used">
+    Abbreviations used:
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -188,6 +217,26 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#results">
+    Results
+  </a>
+<nav aria-label="Results" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abbreviations-used">
+    Abbreviations used:
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -195,6 +244,156 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1>Appendix: Unbiased models' results</h1>
+<h2 id="results">Results<a class="headerlink" href="#results" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>MSE</th>
+<th>RMSE</th>
+<th>MAE</th>
+<th><span class="arithmatex">\(R^2\)</span> statistic</th>
+<th>MAPE (%)</th>
+<th>MdAPE (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rolling linear regression</td>
+<td>110371.9301</td>
+<td>332.2227116</td>
+<td>234.0703576</td>
+<td>0.9403432378</td>
+<td>7.636594873</td>
+<td>5.86419415</td>
+</tr>
+<tr>
+<td>Rolling polynomial regression</td>
+<td>884630.4331</td>
+<td>940.547943</td>
+<td>393.5678591</td>
+<td>0.4983602673</td>
+<td>12.2984977</td>
+<td>5.491194888</td>
+</tr>
+<tr>
+<td>kNN regressor</td>
+<td>708562.9645</td>
+<td>841.7618217</td>
+<td>583.6696106</td>
+<td>0.6447619117</td>
+<td>10.37620696</td>
+<td>8.242460991</td>
+</tr>
+<tr>
+<td>Rolling kNN regressor</td>
+<td>69306.98241</td>
+<td>263.2621933</td>
+<td>187.9282248</td>
+<td>0.9625391151</td>
+<td>6.412249097</td>
+<td>4.733349022</td>
+</tr>
+<tr>
+<td>Naive XGBoost</td>
+<td>469450.7669</td>
+<td>685.1647735</td>
+<td>498.7413995</td>
+<td>0.7646408275</td>
+<td>8.971157778</td>
+<td>7.471825957</td>
+</tr>
+<tr>
+<td>Rolling XGBoost</td>
+<td>67758.72249</td>
+<td>260.3050566</td>
+<td>188.7835581</td>
+<td>0.9633759599</td>
+<td>6.501568004</td>
+<td>4.831666041</td>
+</tr>
+<tr>
+<td>Neural networks (57-20-1)</td>
+<td>2173130.493</td>
+<td>1474.154162</td>
+<td>1322.964328</td>
+<td>-0.08949911367</td>
+<td>24.5471328</td>
+<td>25.18931498</td>
+</tr>
+<tr>
+<td>Rolling neural networks</td>
+<td>264933.6857</td>
+<td>514.7170928</td>
+<td>322.0846974</td>
+<td>0.8566008466</td>
+<td>10.2374128</td>
+<td>7.382278679</td>
+</tr>
+<tr>
+<td>Naive decision trees</td>
+<td>589915.7445</td>
+<td>768.0597272</td>
+<td>550.3918629</td>
+<td>0.7042457031</td>
+<td>10.05114227</td>
+<td>8.073536906</td>
+</tr>
+<tr>
+<td>Rolling decision trees</td>
+<td>94968.42101</td>
+<td>308.169468</td>
+<td>216.5232416</td>
+<td>0.9486689369</td>
+<td>7.211369358</td>
+<td>5.384585412</td>
+</tr>
+<tr>
+<td>AdaBoost (with DT)</td>
+<td>1197958.106</td>
+<td>1094.512725</td>
+<td>903.7533006</td>
+<td>0.3994036256</td>
+<td>18.42378427</td>
+<td>16.25435846</td>
+</tr>
+<tr>
+<td>Rolling AdaBoost (with DT)</td>
+<td>262510.5105</td>
+<td>512.3577954</td>
+<td>379.1674719</td>
+<td>0.8581113234</td>
+<td>12.16986269</td>
+<td>9.953531307</td>
+</tr>
+<tr>
+<td>Bagging regressor (with DT)</td>
+<td>399350.6124</td>
+<td>631.9419375</td>
+<td>460.7829264</td>
+<td>0.7997855445</td>
+<td>8.243560544</td>
+<td>6.856250353</td>
+</tr>
+<tr>
+<td>Rolling bagging regressor  (with DT)</td>
+<td>65762.08751</td>
+<td>256.441197</td>
+<td>184.4860468</td>
+<td>0.9644551544</td>
+<td>6.295581978</td>
+<td>4.707222345</td>
+</tr>
+</tbody>
+</table>
+<h3 id="abbreviations-used">Abbreviations used:<a class="headerlink" href="#abbreviations-used" title="Permanent link">#</a></h3>
+<ul>
+<li>MSE: mean squared error</li>
+<li>RMSE: root mean squared error</li>
+<li>MAE: mean absolute error</li>
+<li>MAPE: mean absolute percentage error</li>
+<li>MdAPE: median absolute percentage error</li>
+</ul>
 </article>
 </div>
 </div>

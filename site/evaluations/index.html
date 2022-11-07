@@ -208,25 +208,6 @@
 <a class="md-nav__link" href="#extended-model-evaluations">
     Extended model evaluations
   </a>
-<nav aria-label="Extended model evaluations" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rolling-bagging-regressor">
-    Rolling bagging regressor
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rolling-knn-regressor">
-    Rolling kNN regressor
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rolling-xgboost-regressor">
-    Rolling XGBoost regressor
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -302,25 +283,6 @@
 <a class="md-nav__link" href="#extended-model-evaluations">
     Extended model evaluations
   </a>
-<nav aria-label="Extended model evaluations" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rolling-bagging-regressor">
-    Rolling bagging regressor
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rolling-knn-regressor">
-    Rolling kNN regressor
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rolling-xgboost-regressor">
-    Rolling XGBoost regressor
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -338,18 +300,82 @@
 <h2 id="primary-model-evaluations">Primary model evaluations<a class="headerlink" href="#primary-model-evaluations" title="Permanent link">#</a></h2>
 <p>In this section, we shall detail the performance metrics of the models that our team has created. Note that since this is only a primary stage of evaluation, we only compare the different models based on the five metrics that we have chosen, without any accompanying data visualisations.</p>
 <h3 id="biased-model-results">Biased model results<a class="headerlink" href="#biased-model-results" title="Permanent link">#</a></h3>
-<p>Please visit <a href="../results-biased/">this page</a> to view the performance metrics of our models that have been trained using an arbitrary train-test split, i.e., the results of models tainted with lookahead bias. For more details on the issue we faced, please visit <a href="../lookahead-bias/">this page</a>.</p>
+<p>Please visit <a href="../results-biased/">this page</a> to view the performance metrics of our models that have been trained using an arbitrary train-test split, i.e., the results of models tainted with lookahead bias. For more details this issue and our solution, please visit <a href="../lookahead-bias/">this page</a>.</p>
 <p>A notable result is that of kNN regressor, where the MAPE was close to 0%, indicating that there must be some serious issue either with overfitting or with the training data.</p>
 <h3 id="unbiased-model-results">Unbiased model results<a class="headerlink" href="#unbiased-model-results" title="Permanent link">#</a></h3>
 <p>Please visit <a href="../results-unbiased/">this page</a> to view the performance metrics of our models trained after fixing the lookahead bias.</p>
+<p>As we can see, the best models are (in order of increasing MdAPE) rolling bagging regressor, rolling kNN regressor, and rolling XGBoost regressor. Hence we shall choose these three models for further analysis below.</p>
 <h2 id="extended-model-evaluations">Extended model evaluations<a class="headerlink" href="#extended-model-evaluations" title="Permanent link">#</a></h2>
 <p>In this section, we shall detail the three models that we have selected, namely rolling bagging regressor, rolling kNN regressor, and rolling XGBoost regressor in more depth through the use of data visualisations on the models' predictions.</p>
-<h3 id="rolling-bagging-regressor">Rolling bagging regressor<a class="headerlink" href="#rolling-bagging-regressor" title="Permanent link">#</a></h3>
-<h3 id="rolling-knn-regressor">Rolling kNN regressor<a class="headerlink" href="#rolling-knn-regressor" title="Permanent link">#</a></h3>
-<h3 id="rolling-xgboost-regressor">Rolling XGBoost regressor<a class="headerlink" href="#rolling-xgboost-regressor" title="Permanent link">#</a></h3>
-<ul>
-<li><a href="../rolling-xgboost/xgboost-lat-lon-fig.html">xgboost-lat-lon-fig.html</a></li>
-</ul>
+<p>All models perform poorly at the start of the period (which is in 1991) according to the MAPE and MdAPE metrics due to a lack of data from previous time intervals. In several towns, most notably Sembawang, the models perform exceptionally poorly across certain time periods due to sparsity of data in those time periods. For example, the number of data points each year for Sembawang is less than 10 from 1990 to 2001, with many years having only 2 data points. This lack of transaction data can be seen with <a href="../town-over-time-fig.html">this visualisation</a>.</p>
+<p>It can also be noted that across all chosen models, the mean absolute error is the highest for towns near the southern region of central Singapore, such as Bukit Merah (7.19/7.55/7.51), Queenstown (7.49/7.90/7.70) and Kallang (7.38/7.56/7.68) (from left to right: rolling bagging regressor, rolling XGBoost regressor, rolling kNN regressor). This is most likely due to the smaller number of datapoints for towns in said region across the entire timeframe, as indicated by the size of the bubbles in <a href="../town-overall-fig.html">this figure</a>.</p>
+<p>We list out the visualisations that support the above points below:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Rolling bagging regressor</th>
+<th>Rolling kNN regressor</th>
+<th>Rolling XGBoost regressor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Per-HDB scatter mapbox of MAPEs</td>
+<td><a href="../rolling-baggingregressor/baggingregressor-lat-lon-fig.html">baggingregressor-lat-lon-fig</a></td>
+<td><a href="../rolling-knnregressor/knnregressor-lat-lon-fig.html">knnregressor-lat-lon-fig</a></td>
+<td><a href="../rolling-xgboost/xgboost-lat-lon-fig.html">xgboost-lat-lon-fig</a></td>
+</tr>
+<tr>
+<td>Per-town scatter mapbox of MAPEs</td>
+<td><a href="../rolling-baggingregressor/baggingregressor-town-fig.html">baggingregressor-town-fig</a></td>
+<td><a href="../rolling-knnregressor/knnregressor-town-fig.html">knnregressor-town-fig</a></td>
+<td><a href="../rolling-xgboost/xgboost-town-fig.html">xgboost-town-fig</a></td>
+</tr>
+<tr>
+<td>Per-town scatter mapbox of MdAPEs</td>
+<td><a href="../rolling-baggingregressor/baggingregressor-town-fig-med.html">baggingregressor-town-fig-med</a></td>
+<td><a href="../rolling-knnregressor/knnregressor-town-fig-med.html">knnregressor-town-fig-med</a></td>
+<td><a href="../rolling-xgboost/xgboost-town-fig-med.html">xgboost-town-fig-med</a></td>
+</tr>
+<tr>
+<td>Per-town yearly scatter mapbox of MAPEs</td>
+<td><a href="../rolling-baggingregressor/baggingregressor-time-town-fig.html">baggingregressor-time-town-fig</a></td>
+<td><a href="../rolling-knnregressor/knnregressor-time-town-fig.html">knnregressor-time-town-fig</a></td>
+<td><a href="../rolling-xgboost/xgboost-time-town-fig.html">xgboost-time-town-fig</a></td>
+</tr>
+<tr>
+<td>Per-town yearly line plot of MAPEs</td>
+<td><a href="../rolling-baggingregressor/baggingregressor-mape-time-town.html">baggingregressor-mape-time-town</a></td>
+<td><a href="../rolling-knnregressor/knnregressor-mape-time-town.html">knnregressor-mape-time-town</a></td>
+<td><a href="../rolling-xgboost/xgboost-mape-time-town.html">xgboost-mape-time-town</a></td>
+</tr>
+<tr>
+<td>Per-town yearly line plot of MdAPEs</td>
+<td><a href="../rolling-baggingregressor/baggingregressor-mdape-time-town.html">baggingregressor-mdape-time-town</a></td>
+<td><a href="../rolling-knnregressor/knnregressor-mdape-time-town.html">knnregressor-mdape-time-town</a></td>
+<td><a href="../rolling-xgboost/xgboost-mdape-time-town.html">xgboost-mdape-time-town</a></td>
+</tr>
+<tr>
+<td>Per-town yearly boxplot of MAPEs</td>
+<td><a href="../rolling-baggingregressor/baggingregressor-mape-boxplot-town.html">baggingregressor-mape-boxplot-town</a></td>
+<td><a href="../rolling-knnregressor/knnregressor-mape-boxplot-town.html">knnregressor-mape-boxplot-town</a></td>
+<td><a href="../rolling-xgboost/xgboost-mape-boxplot-town.html">xgboost-mape-boxplot-town</a></td>
+</tr>
+<tr>
+<td>Heatmap of features (<code>actual</code> = target variable, <code>pred</code> = prediction)</td>
+<td><a href="../rolling-baggingregressor/baggingregressor-heatmap.html">baggingregressor-heatmap</a></td>
+<td><a href="../rolling-knnregressor/knnregressor-heatmap.html">knnregressor-heatmap</a></td>
+<td><a href="../rolling-xgboost/xgboost-heatmap.html">xgboost-heatmap</a></td>
+</tr>
+<tr>
+<td>Per-town scatterplot of MAPEs (red line is overall model MAPE)</td>
+<td><a href="../rolling-baggingregressor/baggingregressor-town-mape.png">baggingregressor-town-mape</a></td>
+<td><a href="../rolling-knnregressor/knnregressor-town-mape.png">knnregressor-town-mape</a></td>
+<td><a href="../rolling-xgboost/xgboost-town-mape.png">xgboost-town-mape</a></td>
+</tr>
+</tbody>
+</table>
 </article>
 </div>
 </div>
