@@ -7,4 +7,6 @@ plotly-express
 tensorflow
 scikit-learn
 xgboost
+pandas-profiling
+statsmodels
 mkdocs
