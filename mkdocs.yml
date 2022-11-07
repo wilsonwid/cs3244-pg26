@@ -31,6 +31,7 @@ nav:
   - Exploratory data analysis: eda.md
   - Data preprocessing: feature-engineering.md
   - Model design and creation: models.md
+  - Lookahead bias: lookahead-bias.md
   - Model evaluation: evaluations.md
   - Credits: credits.md
 
