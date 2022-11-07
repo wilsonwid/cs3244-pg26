@@ -31,7 +31,7 @@ We used resale_price and floor_area to compute the CPI-adjusted price-per square
 | `town` | CN | Town where the property is located in. Low counts were coerced to OTHER. Cutoff ($>= 12000$) chosen with elbow plot. | EDA | 
 | `period` | CO | `period` for our rolling models. period is a quarterly label e.g. `1991Q1`, `1991Q2`, `1991Q3`, `1991Q4`,`1992Q1`, etc. | Same as `sale_month` but different representation for rolling models. |
 
-## Shorthand used:
+## Abbreviations used:
 
 * NC = Numerical (continuous)
 * I = Well-known and undamentally important features that determines a property's value.

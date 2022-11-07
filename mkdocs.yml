@@ -35,8 +35,8 @@ nav:
   - Model evaluation: evaluations.md
   - Credits: credits.md
   - "Appendix: Hyperparameters": hyperparameters.md
-  - "Appendix: Biased results": results-biased.md
-  - "Appendix: Unbiased results": results-unbiased.md
+  - "Appendix: Biased models' results": results-biased.md
+  - "Appendix: Unbiased models' results": results-unbiased.md
 
 # Markdown Extensions
 markdown_extensions:
