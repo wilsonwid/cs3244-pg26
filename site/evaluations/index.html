@@ -30,7 +30,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#rolling-xgboost">
+<a class="md-skip" href="#general-description">
           Skip to content
         </a>
 </div>
@@ -167,9 +167,61 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#rolling-xgboost">
-    Rolling XGBoost
+<a class="md-nav__link" href="#general-description">
+    General description
   </a>
+<nav aria-label="General description" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#price-histogram">
+    Price histogram
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#primary-model-evaluations">
+    Primary model evaluations
+  </a>
+<nav aria-label="Primary model evaluations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#biased-model-results">
+    Biased model results
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unbiased-model-results">
+    Unbiased model results
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extended-model-evaluations">
+    Extended model evaluations
+  </a>
+<nav aria-label="Extended model evaluations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rolling-bagging-regressor">
+    Rolling bagging regressor
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rolling-knn-regressor">
+    Rolling kNN regressor
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rolling-xgboost-regressor">
+    Rolling XGBoost regressor
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -194,9 +246,61 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#rolling-xgboost">
-    Rolling XGBoost
+<a class="md-nav__link" href="#general-description">
+    General description
   </a>
+<nav aria-label="General description" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#price-histogram">
+    Price histogram
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#primary-model-evaluations">
+    Primary model evaluations
+  </a>
+<nav aria-label="Primary model evaluations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#biased-model-results">
+    Biased model results
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unbiased-model-results">
+    Unbiased model results
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extended-model-evaluations">
+    Extended model evaluations
+  </a>
+<nav aria-label="Extended model evaluations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rolling-bagging-regressor">
+    Rolling bagging regressor
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rolling-knn-regressor">
+    Rolling kNN regressor
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rolling-xgboost-regressor">
+    Rolling XGBoost regressor
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -206,8 +310,23 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1>Model evaluation</h1>
-<p>This section contains all the data visualisations and/or analyses that we have done for the three best models we have created and selected based on preliminary performance metrics. These performance metrics include the mean squared error (MSE), root mean squared error (RMSE), mean absolute error (MAE), <span class="arithmatex">\(R^2\)</span> (the coefficient of determination), the mean absolute percentage error (MAPE), and the median absolute percentage error (MdAPE).</p>
-<h3 id="rolling-xgboost">Rolling XGBoost<a class="headerlink" href="#rolling-xgboost" title="Permanent link">#</a></h3>
+<h2 id="general-description">General description<a class="headerlink" href="#general-description" title="Permanent link">#</a></h2>
+<p>The following evaluation metrics are options that we have considered. However, to judge the efficacy of our models, we have decided on primarily using the mean absolute percentage error (MAPE) and median absolute percentage error (MdAPE). These evaluation metrics are best suited for our particular dataset due to property prices having a wider range of values, i.e. a percentage error indicates a similar proportion of impact be it for a $100,000 or a $10,000,000 property. This is crucial as the resale price has a heavy right-tailed distribution (see the figure below; also available in the EDA report) due to some properties having very high transaction prices. Furthermore, both the MAPE and the MdAPE are more easily understandable metrics as they are described in terms of percentages.</p>
+<h3 id="price-histogram">Price histogram<a class="headerlink" href="#price-histogram" title="Permanent link">#</a></h3>
+<p>Below is a histogram of resale property prices, which indicates a heavy right-tailed distribution.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../price-freq-hist.jpg"><img alt="price-freq-hist.jpg" src="../price-freq-hist.jpg"/></a></p>
+<h2 id="primary-model-evaluations">Primary model evaluations<a class="headerlink" href="#primary-model-evaluations" title="Permanent link">#</a></h2>
+<p>In this section, we shall detail the performance metrics of the models that our team has created. Note that since this is only a primary stage of evaluation, we only compare the different models based on the five metrics that we have chosen, without any accompanying data visualisations.</p>
+<h3 id="biased-model-results">Biased model results<a class="headerlink" href="#biased-model-results" title="Permanent link">#</a></h3>
+<p>Please visit <a href="">this page</a> to view the performance metrics of our models that have been trained using an arbitrary train-test split, i.e., the results of models tainted with lookahead bias. </p>
+<p>A notable result is that of kNN regressor, where the MAPE was close to 0%, indicating that there must be some serious issue either with overfitting or with the training data.</p>
+<h3 id="unbiased-model-results">Unbiased model results<a class="headerlink" href="#unbiased-model-results" title="Permanent link">#</a></h3>
+<p>Please visit <a href="">this page</a> to view the performance metrics of our models trained after fixing the lookahead bias.</p>
+<h2 id="extended-model-evaluations">Extended model evaluations<a class="headerlink" href="#extended-model-evaluations" title="Permanent link">#</a></h2>
+<p>In this section, we shall detail the three models that we have selected, namely rolling bagging regressor, rolling kNN regressor, and rolling XGBoost regressor in more depth through the use of data visualisations on the models' predictions.</p>
+<h3 id="rolling-bagging-regressor">Rolling bagging regressor<a class="headerlink" href="#rolling-bagging-regressor" title="Permanent link">#</a></h3>
+<h3 id="rolling-knn-regressor">Rolling kNN regressor<a class="headerlink" href="#rolling-knn-regressor" title="Permanent link">#</a></h3>
+<h3 id="rolling-xgboost-regressor">Rolling XGBoost regressor<a class="headerlink" href="#rolling-xgboost-regressor" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="../rolling-xgboost/xgboost-lat-lon-fig.html">xgboost-lat-lon-fig.html</a></li>
 </ul>

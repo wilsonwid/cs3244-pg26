@@ -30,7 +30,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#basic-feature-engineering">
+<a class="md-skip" href="#general-description">
           Skip to content
         </a>
 </div>
@@ -157,9 +157,43 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#basic-feature-engineering">
-    Basic feature engineering
+<a class="md-nav__link" href="#general-description">
+    General description
   </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-processing">
+    Data processing
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#feature-engineering">
+    Feature engineering
+  </a>
+<nav aria-label="Feature engineering" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#target-variable">
+    Target variable
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#predictors">
+    Predictors
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shorthand-used">
+    Shorthand used:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#relativity-measure-for-tenure">
+    Relativity measure for tenure
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#adding-location-data">
@@ -199,9 +233,43 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#basic-feature-engineering">
-    Basic feature engineering
+<a class="md-nav__link" href="#general-description">
+    General description
   </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-processing">
+    Data processing
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#feature-engineering">
+    Feature engineering
+  </a>
+<nav aria-label="Feature engineering" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#target-variable">
+    Target variable
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#predictors">
+    Predictors
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shorthand-used">
+    Shorthand used:
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#relativity-measure-for-tenure">
+    Relativity measure for tenure
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#adding-location-data">
@@ -216,8 +284,9 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1>Data preprocessing</h1>
-<h2 id="basic-feature-engineering">Basic feature engineering<a class="headerlink" href="#basic-feature-engineering" title="Permanent link">#</a></h2>
-<p>We conducted our feature engineering with the aim of producing as many useful features as possible to complement the raw data that has been provided. In order to do this, several things that we have done include:</p>
+<h2 id="general-description">General description<a class="headerlink" href="#general-description" title="Permanent link">#</a></h2>
+<p>We conducted our feature engineering with the aim of producing as many useful features as possible to complement the raw data that has been provided. </p>
+<h2 id="data-processing">Data processing<a class="headerlink" href="#data-processing" title="Permanent link">#</a></h2>
 <ul>
 <li>Dropping duplicate transactions</li>
 <li>Coercing low count categories to <code>OTHER</code> (as described in the exploratory data analysis portion)</li>
@@ -226,10 +295,115 @@
 <li>Remaining lease was imputed using a 99-year lease assumption for HDB flats, which was then transformed into <code>relative_tenure</code>.</li>
 <li>Using a per-square metre price instead of the resale price itself, due to a high correlation between them.</li>
 </ul>
-<p>Moreover, we have included a basic Single Ordinary Least Squares (OLS) model to ensure that our data preprocessing is working as intended. This is different from our baseline model, which is a normal linear regression model implemented with <a href="https://scikit-learn.org/stable/modules/classes.html">Scikit-learn</a> that we will detail more in the <a href="../models/">Models</a> section.</p>
+<h2 id="feature-engineering">Feature engineering<a class="headerlink" href="#feature-engineering" title="Permanent link">#</a></h2>
+<h3 id="target-variable">Target variable<a class="headerlink" href="#target-variable" title="Permanent link">#</a></h3>
+<p>We used resale_price and floor_area to compute the CPI-adjusted price-per square metre (<code>cpi_psm</code>) which should be used as an indicator of the underlying value of a property. It is the easiest way to ensure that we have an apple to apples comparison when comparing properties’ values within a market. </p>
+<h3 id="predictors">Predictors<a class="headerlink" href="#predictors" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Type</th>
+<th>Engineering</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>floor</code></td>
+<td>NC</td>
+<td>Since the data does not provide the exact floor, we take the middle value of the <code>storey_range</code> column.</td>
+<td>I</td>
+</tr>
+<tr>
+<td><code>age</code></td>
+<td>NC</td>
+<td>We computed the building’s age using <code>sale_date - lease_commence_date</code></td>
+<td>I</td>
+</tr>
+<tr>
+<td><code>relative_tenure</code></td>
+<td>NC</td>
+<td><code>remaining_lease</code> was imputed using the fact that all HDB properties have a 99-year lease. This was then transformed into relative_tenure. This measure of relativity relates the term left for a property to the percentage of freehold value by curve fitting. The equation is set up as a discount formula and minimises the sum of squared errors. See curve and formula below.</td>
+<td>I</td>
+</tr>
+<tr>
+<td><code>floor_area</code></td>
+<td>NC</td>
+<td>Floor area of property in square metres.</td>
+<td>I</td>
+</tr>
+<tr>
+<td><code>nearest_&lt;point of interest&gt;</code></td>
+<td>NC</td>
+<td><code>nearest_&lt;point of interest&gt;</code> features using a property’s coordinates and point of interest coordinates (obtained using OneMapAPI and Google Maps API - see below table). The distances are in kilometres.</td>
+<td>Our hypothesis is that the nearby amenities and points of interest will be significant in a property’s value.</td>
+</tr>
+<tr>
+<td><code>sale_month</code></td>
+<td>ND</td>
+<td>Converting datetime columns to an encoded numerical feature sale_month for our single models. sale_month assigns each month with a number and it’s ordered from 1 for the earliest month and increments up to the latest month.</td>
+<td>Valuations are time varying dependent on the economy, the housing market and the government’s policies.</td>
+</tr>
+<tr>
+<td><code>cpi</code></td>
+<td>NC</td>
+<td>Data provided by the Monetary Authority of Singapore (MAS)</td>
+<td>Since our data spans a long time period, correcting resale prices to the present requires the use of CPI data.</td>
+</tr>
+<tr>
+<td><code>avg_sora</code></td>
+<td>NC</td>
+<td>Data provided by MAS</td>
+<td>We hypothesise that interest rates have an effect on the prices of homes.</td>
+</tr>
+<tr>
+<td><code>is_imputed_sora</code></td>
+<td>CB</td>
+<td>An indicator on whether the avg_sora for that observation was imputed with the mean.</td>
+<td>Additional information for the model to infer whether it is an observed sora or imputed.</td>
+</tr>
+<tr>
+<td><code>flat_type</code></td>
+<td>CN</td>
+<td>Type of HDB flat. Low counts were coerced to <code>OTHER</code>. Cutoff (<span class="arithmatex">\(&gt;= 50000\)</span>) chosen with elbow plot.</td>
+<td>EDA</td>
+</tr>
+<tr>
+<td><code>flat_model</code></td>
+<td>CN</td>
+<td>Flat model. Low counts were coerced to <code>OTHER</code>. Cutoff (<span class="arithmatex">\(&gt;= 9000\)</span>) chosen with elbow plot.</td>
+<td>EDA</td>
+</tr>
+<tr>
+<td><code>town</code></td>
+<td>CN</td>
+<td>Town where the property is located in. Low counts were coerced to OTHER. Cutoff (<span class="arithmatex">\(&gt;= 12000\)</span>) chosen with elbow plot.</td>
+<td>EDA</td>
+</tr>
+<tr>
+<td><code>period</code></td>
+<td>CO</td>
+<td><code>period</code> for our rolling models. period is a quarterly label e.g. <code>1991Q1</code>, <code>1991Q2</code>, <code>1991Q3</code>, <code>1991Q4</code>,<code>1992Q1</code>, etc.</td>
+<td>Same as <code>sale_month</code> but different representation for rolling models.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="shorthand-used">Shorthand used:<a class="headerlink" href="#shorthand-used" title="Permanent link">#</a></h3>
+<ul>
+<li>NC = Numerical (continuous)</li>
+<li>I = Well-known and undamentally important features that determines a property's value.</li>
+<li>ND = Numerical (discrete)</li>
+<li>CB = Categorical (boolean)</li>
+<li>CN = Categorical (nominal)</li>
+<li>EDA = Based on EDA done (see section on EDA for more complete explanations)</li>
+<li>CO = Categorical (ordinal)</li>
+</ul>
+<h3 id="relativity-measure-for-tenure">Relativity measure for tenure<a class="headerlink" href="#relativity-measure-for-tenure" title="Permanent link">#</a></h3>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../relativity-measure.jpg"><img alt="relativity-measure.jpg" src="../relativity-measure.jpg"/></a></p>
 <h2 id="adding-location-data">Adding location data<a class="headerlink" href="#adding-location-data" title="Permanent link">#</a></h2>
 <p>In order to inject more features into the dataset, we decided to use the <a href="https://www.onemap.gov.sg/docs/">OneMap API</a> to attain the various ATM, bus stop, hawker centre, library, parks, pharmacies, post office, primary school, store, and train station locations in terms of their latitudes and longitudes. Furthermore, we used the <a href="https://developers.google.com/maps/documentation">Google Maps API</a> to also geocode the addresses of the HDB resale flats in our dataset. </p>
-<p>There were, however, some addresses (n = 149) that have failed to be retrieved via geocoding, and some of them (n = 46) also had issues with respect the geocoding that was retrieved, out of a total of 9,307 addresses that were included in the dataset. Although the former was dropped, the latter was included as we decided that the detrimental effect of a 'wrong' geocode was insignificant, and since there might still be useful information to be extracted from other features.</p>
+<p>There were, however, some addresses (n = 149) that have failed to be retrieved via geocoding, and some of them (n = 46) also had issues with respect the geocoding that was retrieved, out of a total of 9,307 unique HDB flat addresses that were included in the dataset. Although the former was dropped, the latter was included as we decided that the detrimental effect of a 'wrong' geocode was insignificant, and since there might still be useful information to be extracted from other features.</p>
 </article>
 </div>
 </div>
