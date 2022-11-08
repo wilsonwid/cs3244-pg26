@@ -201,6 +201,30 @@
     Unbiased model results
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#description-of-selected-models">
+    Description of selected models
+  </a>
+<nav aria-label="Description of selected models" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rolling-bagging-regressor">
+    Rolling bagging regressor
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rolling-knn-regressor">
+    Rolling kNN regressor
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rolling-xgboost-regressor">
+    Rolling XGBoost regressor
+  </a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -276,6 +300,30 @@
     Unbiased model results
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#description-of-selected-models">
+    Description of selected models
+  </a>
+<nav aria-label="Description of selected models" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rolling-bagging-regressor">
+    Rolling bagging regressor
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rolling-knn-regressor">
+    Rolling kNN regressor
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rolling-xgboost-regressor">
+    Rolling XGBoost regressor
+  </a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </li>
@@ -305,6 +353,13 @@
 <h3 id="unbiased-model-results">Unbiased model results<a class="headerlink" href="#unbiased-model-results" title="Permanent link">#</a></h3>
 <p>Please visit <a href="../results-unbiased/">this page</a> to view the performance metrics of our models trained after fixing the lookahead bias.</p>
 <p>As we can see, the best models are (in order of increasing MdAPE) rolling bagging regressor, rolling kNN regressor, and rolling XGBoost regressor. Hence we shall choose these three models for further analysis below.</p>
+<h3 id="description-of-selected-models">Description of selected models<a class="headerlink" href="#description-of-selected-models" title="Permanent link">#</a></h3>
+<h4 id="rolling-bagging-regressor">Rolling bagging regressor<a class="headerlink" href="#rolling-bagging-regressor" title="Permanent link">#</a></h4>
+<p>The first of our models is the rolling bagging regressor. This model is an ensemble which fits a base regressor on random subsets of the original dataset before aggregating their individual predictions (either by voting or by averaging) to form a final prediction. The base regressor used was the default decision tree regressor. However, when used alone, the decision tree regressor results in high variance in the data. Hence, we chose to use an ensemble of decision trees to reduce the variance associated through randomisation and aggregation of results.</p>
+<h4 id="rolling-knn-regressor">Rolling kNN regressor<a class="headerlink" href="#rolling-knn-regressor" title="Permanent link">#</a></h4>
+<p>The second selected model is the rolling kNN regressor. This model averages the prices of the k nearest neighbours of every target to provide a prediction for the target’s price. After hyperparameter tuning using GridSearchCV and a scoring metric of negative RMSE, the selected hyperparameters for the model were k = 4, distance metric of manhattan distance, and weight function of “distance”. A weight function of “distance” means that the points are weighted by the inverse of their distance from the target, which implies that closer neighbours have a greater influence on the predicted price. </p>
+<h4 id="rolling-xgboost-regressor">Rolling XGBoost regressor<a class="headerlink" href="#rolling-xgboost-regressor" title="Permanent link">#</a></h4>
+<p>Our final model is the XGBoost regressor. This model is also an ensemble which uses decision trees as the base regressor on random subsets before aggregating individual predictions to form a final prediction. However, the key difference between the XGBoost regressor and the bagging regressor is that the XGBoost algorithm optimises gradient boosting. XGBoost does so by making use of the Newton Raphson method instead of normal gradient descent, with the use of a second order Taylor approximation in the loss function to make the connection to Newton-Raphson. Hence, the XGBoost regressor can be said to be the more optimised version of the bagging regressor. </p>
 <h2 id="extended-model-evaluations">Extended model evaluations<a class="headerlink" href="#extended-model-evaluations" title="Permanent link">#</a></h2>
 <p>In this section, we shall detail the three models that we have selected, namely rolling bagging regressor, rolling kNN regressor, and rolling XGBoost regressor in more depth through the use of data visualisations on the models' predictions.</p>
 <p>All models perform poorly at the start of the period (which is in 1991) according to the MAPE and MdAPE metrics due to a lack of data from previous time intervals. In several towns, most notably Sembawang, the models perform exceptionally poorly across certain time periods due to sparsity of data in those time periods. For example, the number of data points each year for Sembawang is less than 10 from 1990 to 2001, with many years having only 2 data points. This lack of transaction data can be seen with <a href="../town-over-time-fig.html">this visualisation</a>.</p>
