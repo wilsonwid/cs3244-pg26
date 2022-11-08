@@ -19,6 +19,18 @@ Please visit [this page](results-unbiased.md) to view the performance metrics of
 
 As we can see, the best models are (in order of increasing MdAPE) rolling bagging regressor, rolling kNN regressor, and rolling XGBoost regressor. Hence we shall choose these three models for further analysis below.
 
+## Description of selected models
+
+### Rolling bagging regressor
+The first of our models is the rolling bagging regressor. This model is an ensemble which fits a base regressor on random subsets of the original dataset before aggregating their individual predictions (either by voting or by averaging) to form a final prediction. The base regressor used was the default decision tree regressor. However, when used alone, the decision tree regressor results in high variance in the data. Hence, we chose to use an ensemble of decision trees to reduce the variance associated through randomisation and aggregation of results.
+
+### Rolling kNN regressor
+The second selected model is the rolling kNN regressor. This model averages the prices of the k nearest neighbours of every target to provide a prediction for the target’s price. After hyperparameter tuning using GridSearchCV and a scoring metric of negative RMSE, the selected hyperparameters for the model were k = 4, distance metric of manhattan distance, and weight function of “distance”. A weight function of “distance” means that the points are weighted by the inverse of their distance from the target, which implies that closer neighbours have a greater influence on the predicted price. 
+
+### Rolling XGBoost regressor
+Our final model is the XGBoost regressor. This model is also an ensemble which uses decision trees as the base regressor on random subsets before aggregating individual predictions to form a final prediction. However, the key difference between the XGBoost regressor and the bagging regressor is that the XGBoost algorithm optimises gradient boosting. XGBoost does so by making use of the Newton Raphson method instead of normal gradient descent, with the use of a second order Taylor approximation in the loss function to make the connection to Newton-Raphson. Hence, the XGBoost regressor can be said to be the more optimised version of the bagging regressor. 
+
+
 # Extended model evaluations
 In this section, we shall detail the three models that we have selected, namely rolling bagging regressor, rolling kNN regressor, and rolling XGBoost regressor in more depth through the use of data visualisations on the models' predictions.
 
