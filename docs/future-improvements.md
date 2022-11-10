@@ -3,3 +3,4 @@ Our project certainly has a few possible future improvements that are worthy of 
 * Using a voting regressor, which uses several distinct models to 'vote' for property prices hence allowing us to amalgamate several models together.
 * Developing additional methods for model explainability, such as visualisations of the data points for kNN regressor.
 * Ensembling other base regressors besides decision trees.
+* Adding hyperparameter tuning for our rolling models, which may improve their performance metrics.

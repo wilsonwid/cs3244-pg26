@@ -27,6 +27,6 @@ We were motivated by 2 main observations for pursuing periodically rolling model
 
 We want to localise the time frame, train in a batch of 5 quarters, and use the 6th quarter to validate our mini-model. Then we perform this action to slide through our entire dataset. All these mini-models will then be part of our final model.
 
-We observe significant performance improvement after adopting this approach. E.g. The single XGBoost model has MAPE, MdAPE of 9.0%, 7.5% respectively while the rolling variant has 6.5%, 4.8% respectively even without hyperparameter tuning.
+We observe significant performance improvement after adopting this approach, e.g., the single XGBoost model has MAPE and  MdAPE of 9.0% and 7.5% respectively, while the rolling variant has 6.5% and 4.8% respectively, even without hyperparameter tuning.
 
 It should also be noted that we did perform some hyperparameter tuning for the single models but none for the rolling models. Hence, we can potentially expect some further improvements in performance if we were to tune the rolling models.
