@@ -33,6 +33,8 @@ nav:
   - Model design and creation: models.md
   - Lookahead bias: lookahead-bias.md
   - Model evaluation: evaluations.md
+  - Feature importance analysis: feature-importance.md
+  - Undervalued and overvalued analysis: under-overvalued.md
   - Credits: credits.md
   - "Appendix: Biased models' results": results-biased.md
   - "Appendix: Unbiased models' results": results-unbiased.md

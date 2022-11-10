@@ -27,7 +27,8 @@ The first of our models is the rolling bagging regressor. This model is an ensem
 Overall, the rolling bagging regressor performed the best out of the three models we chose, with an MAPE of 6.30%  and a MdAPE of 4.71%.
 
 ### Rolling kNN regressor
-The second selected model is the rolling kNN Regressor. This model averages the prices of the k nearest neighbours of every target to provide a prediction for the target’s price. After hyperparameter tuning using GridSearchCV and a scoring metric of negative RMSE, the selected hyperparameters for the model were k = 4, distance metric of manhattan distance, and weight function of “distance”. A weight function of “distance” means that the points are weighted by the inverse of their distance from the target, which implies that closer neighbours have a greater influence on the predicted price. 
+The second selected model is the rolling kNN Regressor. This model averages the prices of the k nearest neighbours of every target to provide a prediction for the target’s price.
+
 
 The rolling kNN regressor model was chosen because of its simplicity as well as its stellar results. The rolling kNN regressor performed the best out of the three models chosen, with an MAPE of 6.41% and MdAPE of 4.73%. 
 
