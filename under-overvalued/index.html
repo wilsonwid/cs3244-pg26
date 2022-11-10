@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-8.5.8" name="generator"/>
-<title>Appendix: Hyperparameters - CS3244 PG26 Documentation</title>
+<title>Undervalued and overvalued analysis - CS3244 PG26 Documentation</title>
 <link href="../assets/stylesheets/main.20d9efc8.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.815d1a91.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -30,6 +30,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#general-background">
+          Skip to content
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -51,7 +54,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Appendix: Hyperparameters
+              Undervalued and overvalued analysis
             
           </span>
 </div>
@@ -159,14 +162,50 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../credits/">
-        Credits
+<a class="md-nav__link" href="../feature-importance/">
+        Feature importance analysis
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Undervalued and overvalued analysis
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        Appendix: Hyperparameters
+        Undervalued and overvalued analysis
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#general-background">
+    General background
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#simulation">
+    Simulation
+  </a>
+<nav aria-label="Simulation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#assumptions">
+    Assumptions
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../credits/">
+        Credits
       </a>
 </li>
 <li class="md-nav__item">
@@ -188,20 +227,56 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#general-background">
+    General background
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#simulation">
+    Simulation
+  </a>
+<nav aria-label="Simulation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#assumptions">
+    Assumptions
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Appendix: Hyperparameters</h1>
+<h1>Undervalued and overvalued analysis</h1>
+<h2 id="general-background">General background<a class="headerlink" href="#general-background" title="Permanent link">#</a></h2>
+<p>For this analysis, we aim to answer the following question: “If someone were to use our model to purchase a property identified as undervalued, would they see a good return on investment after 10 years?”</p>
+<h2 id="simulation">Simulation<a class="headerlink" href="#simulation" title="Permanent link">#</a></h2>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="../under-overvalued-simul.jpg"><img alt="Simulation results" src="../under-overvalued-simul.jpg"/></a></p>
+<p>Benchmark refers to the average return on investment of all the properties in the particular timeframe. In a certain time period, using our model we get the present value and the value 10 years from that time. Using these two values, we can compute the ROI. If ROI is above the red line, we will make a profit and vice versa. As the undervalued ROI is always above the benchmark ROI, our model successfully predicts which properties are undervalued, and vice versa for the overvalued.</p>
+<h3 id="assumptions">Assumptions<a class="headerlink" href="#assumptions" title="Permanent link">#</a></h3>
+<ol>
+<li>We are not accounting for one-off purchase costs, stamp duties, taxes, mortgage loans etc. Accounting for these would suppress some of the more optimistic ROI numbers that we see in this study.</li>
+<li>We have access to the ground truth values, but we may have to use listing data instead for real-life usage.</li>
+<li>Our model has a non-zero error rate hence there is some bias in our ROI computations.</li>
+</ol>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Credits" class="md-footer__link md-footer__link--prev" href="../credits/" rel="prev">
+<a aria-label="Previous: Feature importance analysis" class="md-footer__link md-footer__link--prev" href="../feature-importance/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -210,17 +285,17 @@
 <span class="md-footer__direction">
                 Previous
               </span>
-              Credits
+              Feature importance analysis
             </div>
 </div>
 </a>
-<a aria-label="Next: Appendix: Biased models' results" class="md-footer__link md-footer__link--next" href="../results-biased/" rel="next">
+<a aria-label="Next: Credits" class="md-footer__link md-footer__link--next" href="../credits/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 Next
               </span>
-              Appendix: Biased models' results
+              Credits
             </div>
 </div>
 <div class="md-footer__button md-icon">
