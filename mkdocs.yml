@@ -35,6 +35,7 @@ nav:
   - Model evaluation: evaluations.md
   - Feature importance analysis: feature-importance.md
   - Undervalued and overvalued analysis: under-overvalued.md
+  - Future improvements: future-improvements.md
   - Credits: credits.md
   - "Appendix: Biased models' results": results-biased.md
   - "Appendix: Unbiased models' results": results-unbiased.md

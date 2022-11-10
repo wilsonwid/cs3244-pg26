@@ -1,4 +1,4 @@
-# General background
+# General description
 
 For this analysis, we aim to answer the following question: “If someone were to use our model to purchase a property identified as undervalued, would they see a good return on investment after 10 years?”
 
