@@ -24,11 +24,18 @@ As we can see, the best models are (in order of increasing MdAPE) rolling baggin
 ### Rolling bagging regressor
 The first of our models is the rolling bagging regressor. This model is an ensemble which fits a base regressor on random subsets of the original dataset before aggregating their individual predictions (either by voting or by averaging) to form a final prediction. The base regressor used was the default decision tree regressor. However, when used alone, the decision tree regressor results in high variance in the data. Hence, we chose to use an ensemble of decision trees to reduce the variance associated through randomisation and aggregation of results.
 
+Overall, the bagging regressor performed relatively well with a MAPE of 0.082 and a MdAPE of 0.069.
+
 ### Rolling kNN regressor
-The second selected model is the rolling kNN regressor. This model averages the prices of the k nearest neighbours of every target to provide a prediction for the target’s price. After hyperparameter tuning using GridSearchCV and a scoring metric of negative RMSE, the selected hyperparameters for the model were k = 4, distance metric of manhattan distance, and weight function of “distance”. A weight function of “distance” means that the points are weighted by the inverse of their distance from the target, which implies that closer neighbours have a greater influence on the predicted price. 
+The second selected model is the rolling kNN Regressor. This model averages the prices of the k nearest neighbours of every target to provide a prediction for the target’s price. After hyperparameter tuning using GridSearchCV and a scoring metric of negative RMSE, the selected hyperparameters for the model were k = 4, distance metric of manhattan distance, and weight function of “distance”. A weight function of “distance” means that the points are weighted by the inverse of their distance from the target, which implies that closer neighbours have a greater influence on the predicted price. 
+
+The rolling kNN regressor model was chosen because of its simplicity as well as its stellar results. The rolling kNN regressor performed the best out of the three models chosen, with a MAPE of 0.064 and mdAPE of 0.047. 
 
 ### Rolling XGBoost regressor
-Our final model is the XGBoost regressor. This model is also an ensemble which uses decision trees as the base regressor on random subsets before aggregating individual predictions to form a final prediction. However, the key difference between the XGBoost regressor and the bagging regressor is that the XGBoost algorithm optimises gradient boosting. XGBoost does so by making use of the Newton Raphson method instead of normal gradient descent, with the use of a second order Taylor approximation in the loss function to make the connection to Newton-Raphson. Hence, the XGBoost regressor can be said to be the more optimised version of the bagging regressor. 
+Our final model is the XGBoost regressor. This model is also an ensemble which uses decision trees as the base regressor on random subsets before aggregating individual predictions to form a final prediction. However, the key differentiator of the XGBoost regressor is that the XGBoost algorithm utilises an optimised version of gradient boosting. Boosting, in this sense, involves building base estimators sequentially  with the aim of reducing the bias of the combined estimator. Gradient boosting expands on this by minimising the loss function of particular learners within the model. XGBoost then further optimises on gradient boosting by using L1 and L2 regularisation, which prevents overfitting and improves generalisation capabilities.
+
+As expected, the rolling XGBoost regressor performed better than the unoptimised Bagging Regressor, with a MAPE of 0.065 and a MdAPE of 0.048, trailing behind the rolling kNN regressor, which will be delved into later.
+
 
 
 # Extended model evaluations
