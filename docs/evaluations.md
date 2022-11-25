@@ -46,6 +46,9 @@ It can also be noted that across all chosen models, the mean absolute error is t
 
 We list out the visualisations that support the above points below:
 
+* [Per-HDB yearly scatter mapbox](geocoding_fig.html)
+* [Per-town yearly scatter mapbox](town_geocoding_fig.html)
+
 | |Rolling bagging regressor | Rolling kNN regressor | Rolling XGBoost regressor | 
 |-|----|--------|----------|
 | Per-HDB scatter mapbox of MAPEs |[baggingregressor-lat-lon-fig](./rolling-baggingregressor/baggingregressor-lat-lon-fig.html) | [knnregressor-lat-lon-fig](./rolling-knnregressor/knnregressor-lat-lon-fig.html) | [xgboost-lat-lon-fig](./rolling-xgboost/xgboost-lat-lon-fig.html)|
