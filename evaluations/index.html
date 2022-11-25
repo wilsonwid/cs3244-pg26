@@ -378,6 +378,10 @@
 <p>All models perform poorly at the start of the period (which is in 1991) according to the MAPE and MdAPE metrics due to a lack of data from previous time intervals. In several towns, most notably Sembawang, the models perform exceptionally poorly across certain time periods due to sparsity of data in those time periods. For example, the number of data points each year for Sembawang is less than 10 from 1990 to 2001, with many years having only 2 data points. This lack of transaction data can be seen with <a href="../town-over-time-fig.html">this visualisation</a>.</p>
 <p>It can also be noted that across all chosen models, the mean absolute error is the highest for towns near the southern region of central Singapore, such as Bukit Merah (7.19/7.55/7.51), Queenstown (7.49/7.90/7.70) and Kallang (7.38/7.56/7.68) (from left to right: rolling bagging regressor, rolling XGBoost regressor, rolling kNN regressor). This is most likely due to the smaller number of datapoints for towns in said region across the entire timeframe, as indicated by the size of the bubbles in <a href="../town-overall-fig.html">this figure</a>.</p>
 <p>We list out the visualisations that support the above points below:</p>
+<ul>
+<li><a href="../geocoding_fig.html">Per-HDB yearly scatter mapbox</a></li>
+<li><a href="../town_geocoding_fig.html">Per-town yearly scatter mapbox</a></li>
+</ul>
 <table>
 <thead>
 <tr>
