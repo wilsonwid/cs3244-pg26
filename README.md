@@ -1,5 +1,4 @@
 # cs3244-pg26
----
 CS3244 Team PG26's group project, made by (in alphabetical order):
 * [Lim Koon Kiat](https://github.com/limkoonkiat)
 * [Ng Wen Jun](https://github.com/wenjunthenwj)
@@ -9,7 +8,6 @@ CS3244 Team PG26's group project, made by (in alphabetical order):
 * [Veronica Angelin Setiyo](https://github.com/veronicangelin)
 
 # Navigating the repository
----
 * `data_raw`: All the raw data taken from our dataset sources
 * `data_processed`: Data that has undergone some form of processing
 * `docs`: Files for documentation website; necessary for MkDocs to function well
@@ -21,5 +19,4 @@ CS3244 Team PG26's group project, made by (in alphabetical order):
 **Important note:** The data files (includes files with extensions `.csv`, `.pkl`, and `.sav`) that we have used and/or created are not stored in this repo due to storage constraints. This repository is exclusively meant for displaying the work we have completed, and hence we deem the Jupyter Notebooks and figures we have made to be enough proof of such.
 
 # Credits
----
 All credits are available [here](https://wilsonwid.github.io/cs3244-pg26/credits/) on our documentation website.
