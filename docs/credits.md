@@ -58,7 +58,7 @@ The datasets that we have used are listed below:
 * [MAS core inflation measure (CPI) dataset](https://tablebuilder.singstat.gov.sg/table/TS/M212882)
 * [Singapore overnight rate average (SORA) dataset](https://eservices.mas.gov.sg/statistics/dir/DomesticInterestRates.aspx)
 
-# Video Materials
+# Video materials
 * Bagging and boosting
     * <https://www.geeksforgeeks.org/xgboost/>
     * <https://www.researchgate.net/figure/A-general-architecture-of-XGBoost_fig3_335483097>
@@ -78,6 +78,14 @@ The datasets that we have used are listed below:
     * <https://easyai.tech/en/ai-definition/gradient-descent/>
 * MAS
     * <https://www.mas.gov.sg/>
+
+# Video music
+* Hazy - Cosmos:
+    * <https://soundcloud.com/hazy_music/cosmos-1>
+* Hazy - Courage:
+    * <https://soundcloud.com/hazy_music/courage-album-preview>
+* Hazy - Universe:
+    * <https://soundcloud.com/hazy_music/universe>
 
 # Special mentions
 We would like to thank Prof. Kan Min-Yen and Prof. Brian Lim for their teaching in this module, as well as our project mentor, Tian Xiao, for his advice to us during the course of this project.
