@@ -58,5 +58,26 @@ The datasets that we have used are listed below:
 * [MAS core inflation measure (CPI) dataset](https://tablebuilder.singstat.gov.sg/table/TS/M212882)
 * [Singapore overnight rate average (SORA) dataset](https://eservices.mas.gov.sg/statistics/dir/DomesticInterestRates.aspx)
 
+# Video Materials
+* Bagging and boosting
+    * <https://www.geeksforgeeks.org/xgboost/>
+    * <https://www.researchgate.net/figure/A-general-architecture-of-XGBoost_fig3_335483097>
+* kNN regression
+    * <https://towardsdatascience.com/the-basics-knn-for-classification-and-regression-c1e8a6c955>
+* Regression vs classification
+    * <https://www.simplilearn.com/regression-vs-classification-in-machine-learning-article>
+* Linear vs polynomial regression
+    * <https://serokell.io/blog/polynomial-regression-analysis>
+* Property valuation
+    * <https://pinnacle.sg/property-valuation>
+* Feature engineering
+    * <https://medium.com/@c.giancaterino/relevance-of-feature-engineering-to-build-a-predictive-model-4c9e3e115c90>
+* Mean absolute percentage error (MAPE)
+    * <https://www.dataquest.io/blog/understanding-regression-error-metrics/>
+* Gradient descent
+    * <https://easyai.tech/en/ai-definition/gradient-descent/>
+* MAS
+    * <https://www.mas.gov.sg/>
+
 # Special mentions
-We would like to thank Prof. Kan Min-Yen and Prof. Brian Lim for their teaching in this module, as well as our project mentor Tian Xiao for the advice given to us when working through this project.
+We would like to thank Prof. Kan Min-Yen and Prof. Brian Lim for their teaching in this module, as well as our project mentor, Tian Xiao, for his advice to us during the course of this project.
